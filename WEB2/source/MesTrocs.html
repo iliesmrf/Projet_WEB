@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Swapez Troquez ! </title>
+
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <audio src="sound/music.ogg" autoplay></audio>
+    <link rel="shortcut icon" href="/images/icone.ico" type="image/x-icon"/>
+    <link rel="icon" href="/images/icone.ico" type="image/x-icon"/>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/index.html">
+          <img src="/images/icone.ico" style="width:40px;height:40px;" href="/index.html">
+        </a>
+        <a class="navbar-brand active" href="/index.html">Swap</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="navbar-warpper"><a href="PostTrocs.html">Déposer un Troc</a></li>
+          <li class="navbar-warpper"><a href="AnnounceTrocs.html">Troquer</a></li>
+          <li class="navbar-warpper"><a href="MesTrocs.html">Mes Trocs</a></li>
+          <li class="navbar-warpper"><a href="Mon_Compte.html">Mon Compte</a></li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search" ng-controller="connexion_controller">
+          <div class="form-group">
+            <input type="text" class="form-control" name="username" placeholder="e-Mail" ng-model="username">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Mot de Passe" ng-model="password">
+          </div>
+          <button type="submit" class="btn btn-default" ng-click="connexion()">Se Connecter</button>
+        </form>
+      </div>
+    </div>
+    </nav>
