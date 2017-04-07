@@ -28,11 +28,21 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="navbar-warpper"><a href="index.html">Déposer un Troc</a></li>
+
+          {% if user.username  %} <!-- Je suis connecté -->
+
+          <li class="navbar-warpper"><a href="#">Déposer un Troc</a></li>
           <li class="navbar-warpper"><a href="/troc/troc_search">Troquer</a></li>
-          <li class="navbar-warpper"><a href="index.html">Mes Trocs</a></li>
-          <li class="navbar-warpper"><a href="index.html">Mon Compte</a></li>
-          <li class="navbar-warpper"><a href="/troc/register">Se Connecter</a></li>
+          <li class="navbar-warpper"><a href="#">Mes Trocs</a></li>
+          <li class="navbar-warpper"><a href="/troc/compte">Mon Compte</a></li>
+          <li class="navbar-warpper"><a href="/troc/deconnexion">Se Déconnecter</a></li>
+          {% else %}
+          <li class="navbar-warpper"><a href="/troc/connexion">Déposer un Troc</a></li>
+          <li class="navbar-warpper"><a href="/troc/troc_search">Troquer</a></li>
+          <li class="navbar-warpper"><a href="/troc/connexion">Mes Trocs</a></li>
+          <li class="navbar-warpper"><a href="/troc/connexion">Mon Compte</a></li>
+          <li class="navbar-warpper"><a href="/troc/register">S'inscrire</a></li>
+          {%endif%}
 
         </ul>
 
